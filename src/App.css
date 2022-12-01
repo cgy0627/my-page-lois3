@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+.table {
+  align-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  border: 1px solid black;
+}
+
+.write_button {
+  margin-top: 10px;
+  margin-right: 10px;
+  float: right;
+  background-color: gold;
+}
+
+.h1 {
+  float: none;
+}
