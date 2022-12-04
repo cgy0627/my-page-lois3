@@ -9,6 +9,9 @@ import Posting from "./components/Posting";
 import Home from "./components/Home";
 import DiaryEdit from "./components/DiaryEdit";
 import InsertDiary from "./components/InsertDiary";
+import KakaoLogin from "./components/KakaoLogin";
+import KakaoRedirectHandler from "./api/KakaoRedirectHandler";
+import MyPage from "./components/MyPage";
 
 function App() {
   // 페이지네이션을 위한 필요 데이터
@@ -34,10 +37,16 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="posting" element={<Posting />} />
-          <Route path="diaryFile/*" element={<Diary />} />
-          <Route path="diaryEdit/*" element={<DiaryEdit />} />
-          <Route path="insert" element={<InsertDiary />} />
+          <Route path="/posting" element={<Posting />} />
+          <Route path="/diaryFile/*" element={<Diary />} />
+          <Route path="/diaryEdit/*" element={<DiaryEdit />} />
+          <Route path="/insert" element={<InsertDiary />} />
+          <Route path="/kakaoLogin" element={<KakaoLogin />} />
+          <Route
+            path="/oauth/callback/kakao"
+            element={<KakaoRedirectHandler />}
+          />
+          <Route path="/myPage" element={<MyPage />} />
         </Routes>
       </BrowserRouter>
     </div>
